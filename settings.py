@@ -8,7 +8,7 @@ import logging
 # API URL.
 BASE_URL = 'https://fxadk.com/api/'
 
-#FxADK API Keys
+# FxADK API Keys
 API_KEY = ''
 API_SECRET = ''
 
@@ -31,8 +31,8 @@ ORDER_PAIRS = 6
 # ORDER_START_SIZE will be the number of contracts submitted on level 1
 # Number of contracts from level 1 to ORDER_PAIRS - 1 will follow the function
 # [ORDER_START_SIZE + ORDER_STEP_SIZE (Level -1)]
-ORDER_START_SIZE = 100
-ORDER_STEP_SIZE = 100
+ORDER_START_SIZE = 10
+ORDER_STEP_SIZE = 5
 
 # Distance between successive orders, as a percentage (example: 0.005 for 0.5%)
 INTERVAL = 0.005
@@ -63,9 +63,9 @@ RELIST_INTERVAL = 0.01
 
 # Position limits - set to True to activate. Values are in contracts.
 # If you exceed a position limit, the bot will log and stop quoting that side.
-CHECK_POSITION_LIMITS = False
-MIN_POSITION = -100
-MAX_POSITION = 100
+CHECK_POSITION_LIMITS = True
+MIN_POSITION = -1000000
+MAX_POSITION = 1000000
 
 # If True, will only send orders that rest in the book (ExecInst: ParticipateDoNotInitiate).
 # Use to guarantee a maker rebate.
@@ -79,7 +79,7 @@ POST_ONLY = False
 
 # If true, don't set up any orders, just say what we would do
 # DRY_RUN = True
-DRY_RUN = True
+DRY_RUN = False
 
 # How often to re-check and replace orders.
 # Generally, it's safe to make this short because we're fetching from websockets. But if too many
@@ -115,4 +115,4 @@ WATCHED_FILES = [join('market_maker', 'market_maker.py'), join('market_maker', '
 ########################################################################################################################
 
 # Specify the contracts that you hold. These will be used in portfolio calculations.
-CONTRACTS = ["ADK/USDT"]
+CONTRACTS = ['ADK/USDT']
