@@ -19,7 +19,7 @@ It is free to use and modify for your own strategies.
 5. run `python3 marketmaker setup`
     * This will create `settings.py` and `market_maker/` in the working directory.
     * Modify `settings.py` to tune parameters.
-6. Edit settings.py to add your FxADK API Key and Secret and change bot parameters.
+6. Edit `settings.py` to add your FxADK API Key and Secret and change bot parameters.
     * Note that user/password authentication is not supported.
     * Run with `DRY_RUN=True` to test cost and spread.
 7. Run it: `python3 marketmaker [symbol]`. For example, `python3 marketmaker ADK/USDT`.
